@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function part 2</title>
+  </head>
+  <body>
+    <script>
+      //menjumlahkan volume 2 kubus
+      function volumeKubus(sisi1, sisi2) {
+        let volume1 = sisi1 * sisi1 * sisi1;
+        let volume2 = sisi2 * sisi2 * sisi2;
+        let hasil = volume1 + volume2;
+        return hasil;
+      }
+      console.log(volumeKubus(10, 20));
+      console.log(volumeKubus(5, 15));
+      console.log(volumeKubus(8, 3));
+
+      console.log("=========");
+
+      //tanpa menggunakan function
+      let a = 8;
+      let b = 3;
+      let volumeA;
+      let volumeB;
+      let total;
+
+      volumeA = a * a * a;
+      volumeB = b * b * b;
+      total = volumeA + volumeB;
+
+      console.log(total);
+
+      console.log("=========");
+
+      //fungsi deklarasi  adalah cara paling umum
+      function sapa() {
+        console.log("halo semuanya!");
+      }
+      sapa();
+
+      console.log("=========");
+
+      //fungsi eksresi
+      let sapaUser = function (nama) {
+        console.log(`halo ${nama} selamat pagi!!`);
+      };
+      sapaUser("daffa");
+
+      console.log("=========");
+
+      //arrow function adalah carra paling baru (modern)
+      const sapaTeman = (nama) => {
+        console.log(`halo ${nama}, apa kabarmu?`);
+      };
+      sapaTeman("badran");
+
+      console.log("=========");
+      console.log("");
+      console.log("practice");
+      console.log("1. function sederhana");
+      function tekanTombol() {
+        console.log("tombol ditekan");
+        alert("hello world");
+
+        document.body.style.backgroundColor = "lightblue";
+      }
+      tekanTombol();
+      console.log("");
+
+      console.log("2. function dengan parameter ");
+      function sapaPengunjung(nama) {
+        console.log(
+          `haloo, selamat datang ${nama} di tempat dimana mimpi pasti tercapai, semoga anda menikmati waktu anda`
+        );
+      }
+      sapaPengunjung("daffa badran");
+      sapaPengunjung("saber");
+      console.log("");
+
+      console.log("3. fungsi yang mengembalikan nilai");
+      function tambah(angka1, angka2) {
+        return angka1 + angka2;
+      }
+      const hasilTambah = tambah(3, 5);
+      console.log(hasilTambah);
+      console.log(tambah(10, 20));
+      console.log("");
+
+      //step 1, buat fungsi sederhana
+      function tesFungsi() {
+        console.log("fungsi berhasil dijalankan");
+        return "ini hasil dari fungsi tesFungsi";
+      }
+      tesFungsi();
+      console.log("");
+
+      console.log("3. fungsi dengan multiple parameter");
+      function perkenalan(nama, umur, kota) {
+        console.log(`halo, aku ${nama}`);
+        console.log(`umurku ${umur} tahun`);
+        console.log(`saat ini aku tinggal di ${kota}`);
+      }
+      perkenalan("daffa badran", 20, "jakarta");
+      console.log("");
+      console.log(
+        ` perbedaan antara return dan console.log, console log akan menampikan undefined jika tidak ada nilai yang dikembalikan oleh fungsi sedangkan return akan mengembalikan nilai yang bisa disimpan di variabel atau digunakan lebih lanjut`
+      );
+      console.log("perbedaan console dan return");
+
+      function conTurn() {
+        console.log("hello world dari console.log");
+        return "selamat malam dunia dari return";
+      }
+      let hasilConturn = conTurn();
+      console.log(hasilConturn);
+      console.log(
+        "kode / hasil di atas, jika return dikomentari, maka akan menghasilkan undefined, karena tidak ada nilai return pada parameter, itulah perbedaan paling jelas antara return dan console.log"
+      );
+    </script>
+  </body>
+</html>

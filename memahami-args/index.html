@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>...args | rest parameter</title>
+  </head>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-title {
+      text-align: center;
+      color: #333;
+    }
+
+    h4 {
+      color: #555;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 15px;
+      overflow-x: auto;
+
+    }
+
+    code {
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    mark {
+      background-color: #ffeb3b;
+      padding: 0 4px;
+    }
+
+    h2 {
+        text-decoration: underline;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1 class="header-title">BELAJAR ...args | rest parameter</h1>
+        <section>
+        <h4>Apa itu args?</h4>
+        <ul>
+          <li>
+            Sebuah cara untuk menangkap semua argument yang dikirim ke function
+          </li>
+          <li>
+            <mark>args</mark> bisa diganti nama apapun, contohnya
+            <mark>...Numbers</mark>, <mark>...value</mark>,
+            <mark>...Doraemon</mark>
+          </li>
+        </ul>
+        <h4>Contoh implementasi dalam code:</h4>
+        <pre>
+        <code>
+            function contoh(...args) {
+            console.log(args);
+            }
+
+            contoh(1, 2, 3);          //<samp>[1, 2, 3]</samp>
+            contoh('a', 'b', 'c');    //<samp>['a', 'b', 'c']</samp>
+        </code>
+        </pre>
+        </section>
+
+      <h2><strong>SILAHKAN CEK JAVASCRIPTNYA</h2></strong></h2>
+    </div>  
+
+    <script src="script.js"></script>
+</body>
+</html>

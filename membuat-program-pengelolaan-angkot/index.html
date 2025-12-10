@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Program pengelolaan angkot</title>
+  </head>
+  <body>
+    <h1>Membuat program pengelolaan angkot</h1>
+    <article>
+      <section>
+        <h3>Pengelolaan penumpang</h3>
+        <ul>
+          <li>penumpang naik = tambahPenumpang()</li>
+          <li>penumpang turun = hapusPenumpang()s</li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>tambah penumpang</h4>
+        <ul>
+          <li>
+            2 parameter:
+            <ul>
+              <li>nama penumpang</li>
+              <li>array penumpang</li>
+            </ul>
+          </li>
+
+          <li>
+            Rules:
+            <ul>
+              <li>jika angkot kosong, penumpang naik duduk di kursi pertama</li>
+              <li>
+                penumpang berikutnya duduk di kursi selanjutnya secara berurutan
+              </li>
+              <li>
+                jika ada kursi kosong (karena penumpang turun), penumpang yang
+                naik berikutnya duduk di kursi kosong terlebih dahulu
+              </li>
+              <li>
+                asusmi kursi tidak akan penuh dan akan terus bertambah terus
+                jika ada penumpang naik
+              </li>
+              <li>
+                nama penumpang tidak boleh sama, untuk menghindari kebingungan
+                ketika nanti penumpang turun
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </article>
+    <script src="script.js"></script>
+  </body>
+</html>

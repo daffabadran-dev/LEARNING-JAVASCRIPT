@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>popup</title>
+  </head>
+  <body>
+    <script>
+      alert("selamat datang");
+      let lagi = true;
+
+      while (lagi) {
+        let nama = prompt("masukan nama anda");
+        alert(`halo, ${nama}`);
+
+        lagi = confirm("apakah anda ingin mengulang?");
+      }
+      alert("terima kasih telah berkunjung");
+
+      //contoh simpel
+      let tes = confirm("apakah anda yakin?");
+      if (tes === true) {
+        alert("user menekan ok");
+      } else {
+        alert("user menekan cancel");
+      }
+    </script>
+  </body>
+</html>

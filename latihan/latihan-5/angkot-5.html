@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Daffa Badran" />
+    <meta
+      name="description"
+      content="Penjelasan tentang variabel dan tipe data pada JavaScript."
+    />
+    <meta
+      name="keywords"
+      content="JavaScript, variabel, tipe data, tutorial, pemrograman"
+    />
+    <title>Latihan</title>
+  </head>
+  <body>
+    <h1 id="judul">
+      Daftar Angkot yang Beroperasi menggunakan 1for dan pengkondsian if
+    </h1>
+    <h3 id="sub-judul">in console</h3>
+    <script>
+      //   let angkotBeroperasi = 4; digunakan jika menggunakan cara kedua pada latihan 5
+
+      // latihan 4
+      //   for (let noAngkot = 1; noAngkot <= jmlhAngkot; noAngkot++) {
+      //     if (noAngkot <= angkotBeroperasi) {
+      //       console.log(`Angkot No. ${noAngkot} beroperasi dengan baik.`);
+      //     } else if (noAngkot === 8) {
+      //       console.log(`Angkot No. ${noAngkot} sedang lembur`);
+      //     } else if (noAngkot === 10) {
+      //       console.log(`Angkot No. ${noAngkot} sedang lembur`);
+      //     } else {
+      //       console.log(`Angkot No. ${noAngkot} tidak beroperasi`);
+      //     }
+      //   }
+
+      //latihan 5
+      //   for (let noAngkot = 1; noAngkot <= jmlhAngkot; noAngkot++) {
+      //     if (noAngkot <= angkotBeroperasi) {
+      //       console.log(`Angkot No. ${noAngkot} beroperasi dengan baik.`);
+      //     } else if (noAngkot === 5) {
+      //       console.log(`Angkot No. ${noAngkot} sedang lembur`);
+      //     } else if (noAngkot === 8 || noAngkot === 10) {
+      //       console.log(`Angkot No. ${noAngkot} sedang lembur`);
+      //     } else {
+      //       console.log(`Angkot No. ${noAngkot} tidak beroperasi`);
+      //     }
+      //   }
+
+      //   for (let noAngkot = 1; noAngkot <= jmlhAngkot; noAngkot++) {
+      //     if (noAngkot <= angkotBeroperasi) {
+      //       console.log(`Angkot No. ${noAngkot} beroperasi dengan baik.`);
+      //     } else if (noAngkot === 8 || noAngkot === 10 || noAngkot === 5) {
+      //       console.log(`Angkot No. ${noAngkot} sedang lembur`);
+      //     } else {
+      //       console.log(`Angkot No. ${noAngkot} tidak beroperasi`);
+      //     }
+      //   }
+
+      // document.getElementById("judul").style.textAlign = "center";
+      // document.getElementById("sub-judul").style.margin = "20px";
+      // document.getElementById("sub-judul").style.textAlign = "center";
+
+      // let jmlhAngkot = 10;
+      // let angkotBeroperasi = 6;
+
+      // for (let noAngkot = 1; noAngkot <= jmlhAngkot; noAngkot++) {
+      //   if (noAngkot <= angkotBeroperasi && noAngkot !== 5) {
+      //     console.log(`Angkot No. ${noAngkot} beroperasi dengan baik.`);
+      //   } else if (noAngkot === 8 || noAngkot === 10 || noAngkot === 5) {
+      //     console.log(`Angkot No. ${noAngkot} sedang lembur`);
+      //   } else {
+      //     console.log(`Angkot No. ${noAngkot} tidak beroperasi`);
+      //   }
+      // }
+
+      // #latihan 4 di bawah
+      //   let jumlahAngkot = 10;
+      //   let angkotBeroperasi = 6;
+
+      //   for (let angkot = 1; angkot <= jumlahAngkot; angkot++) {
+      //     if (angkot <= angkotBeroperasi) {
+      //       console.log(`angkot No. ${angkot} beroperasi dengan baiik`);
+      //     } else if (angkot === 8) {
+      //       console.log(`angkot No. ${angkot} sedang lembur`);
+      //     } else {
+      //       console.log(`angkot No. ${angkot} tidak beroperasi`);
+      //     }
+      //   }
+
+      //   kode di atas tidak relavan karena saat tulisan ini dibuat aku setengah lupa, kecuali yang memakai tanda #
+      let jumlahAngkot = 10;
+      let angkotBeroperasi = 6;
+
+      for (angkot = 1; angkot <= jumlahAngkot; angkot++) {
+        if (angkot <= angkotBeroperasi) {
+          console.log(`Angkot No. ${angkot} beroperasi dengan baik`);
+        } else if (angkot === 8 || angkot === 10) {
+          console.log(`Angkot No. ${angkot} sedang lembur`);
+        } else {
+          console.log(`Angkot No. ${angkot} sedang tidak beroperasi`);
+        }
+      }
+    </script>
+  </body>
+</html>

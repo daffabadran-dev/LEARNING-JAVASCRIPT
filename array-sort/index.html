@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>memahami sort</title>
+  </head>
+  <style>
+    body {
+      background-color: lightslategray;
+    }
+  </style>
+  <body>
+    <h1>belajar method sort pada array</h1>
+
+    <script>
+      //sort dasar untuk string
+      let buah = ["mangga", "apel", "ceri", "duria"];
+      console.log(buah.sort().join(" - "));
+      /**
+       * abjad menjadi terurut dari a ke z
+       *
+       *  MASALAH SORT ANGKA (YANG BIKIN BINGUNG)
+       * jika menggunakan ANGKA
+       * contoh:
+       */
+
+      let angka = [10, 2, 1, 20, 5];
+      console.log(angka.sort().join(", "));
+
+      /**
+       * urutannya tidak 1,2,5,10,20
+       * melainkan 1, 10, 2, 20, 5
+       * Kenapa bisa gini?
+       * Karena JavaScript sort() defaultnya nganggap semua elemen sebagai TEXT, bukan angka!
+       * text / string
+       */
+
+      //solusi, memahami solusi yang di dapatkan
+      //memakai compare function
+
+      //cara kerja compare function
+
+      //FUNCTION INI DI PANGGIL BERKALI KALI OLEH SORT()
+      function compareFunction(a, b) {
+        //a adalah elemen pertama yang dibandingkan
+        //b = elemen kedua yang dibandingkan
+        //
+        // JIKA return NEGATIF -> a ditempatkan SEBELUM b
+        // JIKA return POSITIF -> b ditempatkan SEBELUM a
+        // JIKA return 0 -> posisi tetap
+      }
+
+      //   ------------------------------------------------------
+
+      let angka2 = [10, 2, 1, 20, 5];
+
+      // URUT KECIL -> BESAR (ASCENDING)
+      angka.sort(function (a, b) {
+        console.log(`Membandingkan: ${a} dan ${b}`);
+        return a - b;
+      });
+      console.log(angka2); // [1, 2, 5, 10, 20]
+
+      /*
+        Proses yang terjadi:
+
+      sort() ambil dua angka: 10 dan 2
+      Hitung: 10 - 2 = 8 (POSITIF)
+      Karena positif, 2 ditaruh sebelum 10 -> [2, 10, 1, 20, 5]
+      sort() lanjut bandingkan pasangan lain...
+      Terus sampai semua terurut
+        */
+
+      // 1. Buat array angka acak
+      let numbers = [40, 100, 1, 5, 25, 10];
+
+      // 2. Urutkan dari kecil ke besar
+      let ascending = [...numbers].sort((a, b) => a - b);
+      // [...numbers] = buat copy array
+      // .sort((a, b) => a - b) = urutkan dengan compare function ascending
+
+      // 3. Urutkan dari besar ke kecil
+      let descending = [...numbers].sort((a, b) => b - a);
+      // (a, b) => b - a = compare function descending
+
+      console.log("Asli:", numbers);
+      console.log("Kecil -> Besar:", ascending);
+      console.log("Besar -> Kecil:", descending);
+    </script>
+  </body>
+</html>
