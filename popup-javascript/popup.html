@@ -8,20 +8,20 @@
   <body>
     <script>
       alert("selamat datang");
+      let nama;
       let lagi = true;
-
       while (lagi) {
-        let nama = prompt("masukan nama anda");
+        nama = prompt("masukan nama anda");
         alert(`halo, ${nama}`);
 
         lagi = confirm("apakah anda ingin mengulang?");
       }
-      alert("terima kasih telah berkunjung");
+      alert("tunggu sebentar");
 
       //contoh simpel
       let tes = confirm("apakah anda yakin?");
       if (tes === true) {
-        alert("user menekan ok");
+        alert(`selamat tinggal, ${nama}`);
       } else {
         alert("user menekan cancel");
       }
