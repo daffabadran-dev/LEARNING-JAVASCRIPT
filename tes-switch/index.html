@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tes switch</title>
+  </head>
+  <body>
+    <h1>tes switch</h1>
+    <pre>
+      <strong>Sintak Dasar:</strong>
+      <code>
+        switch(ekspresi) {
+    case nilai1:
+        // kode jika ekspresi == nilai1
+        break;
+    case nilai2:
+        // kode jika ekspresi == nilai2  
+        break;
+    default:
+        // kode jika tidak ada yang cocok
+    }
+      </code>
+    </pre>
+    <script>
+      //contoh 1 hari dalam seminggu
+      // let hari = parseInt(prompt("masukan angka hari (1-7):"));
+      // let namaHari;
+
+      // switch (hari) {
+      //   case 1:
+      //     namaHari = "Minggu";
+      //     break;
+      //   case 2:
+      //     namaHari = "Senin";
+      //     break;
+      //   case 3:
+      //     namaHari = "Selasa";
+      //     break;
+      //   case 4:
+      //     namaHari = "Rabu";
+      //     break;
+      //   case 5:
+      //     namaHari = "Kamis";
+      //     break;
+      //   case 6:
+      //     namaHari = "Jumat";
+      //     break;
+      //   case 7:
+      //     namaHari = "Sabtu";
+      //     break;
+      //   default:
+      //     namaHari = "hari tidak valid";
+      // }
+
+      // console.log(namaHari);
+
+      // contoh 2 latihan
+      // let angka = parseInt(prompt("masukan sebuah angka)"));
+      // let hasil;
+
+      // switch (angka % 2) {
+      //   case 0:
+      //     if (angka === 0) {
+      //       hasil = "angka nol";
+      //     } else {
+      //       hasil = "angka genap";
+      //     }
+      //     break;
+      //   case 1:
+      //   case -1: //untuk angka negatif
+      //     hasil = "angka ganjil";
+      //     break;
+      //   default:
+      //     hasil = "input tidak valid";
+      // }
+      // console.log(hasil);
+
+      //cth lain:
+      // let nilai = parseInt(prompt("Masukkan nilai ujian (0-100):"));
+      // let kategori;
+
+      // switch (true) {
+      //   case nilai >= 80 && nilai <= 100:
+      //     kategori = "A";
+      //     break;
+      //   case nilai >= 70 && nilai < 80:
+      //     kategori = "B";
+      //     break;
+      //   case nilai >= 60 && nilai < 70:
+      //     kategori = "C";
+      //     break;
+      //   case nilai >= 50 && nilai < 60:
+      //     kategori = "D";
+      //     break;
+      //   case nilai >= 0 && nilai < 50:
+      //     kategori = "E";
+      //     break;
+      //   default:
+      //     kategori = "Nilai tidak valid";
+      // }
+
+      // console.log("Kategori nilai: " + kategori);
+
+      // let angka = parseInt(prompt("masukan angka"));
+      // let hasil;
+
+      // switch (angka) {
+      //   case 2:
+      //   case 4:
+      //   case 6:
+      //     hasil = "angka genap kecil";
+      //     break;
+      //   default:
+      //     hasil = "angka tidak termasuk";
+      //     break;
+      // }
+
+      // console.log(hasil);
+
+      let pilihan = parseInt(prompt("Pilih menu (1-3):"));
+      let hasil;
+
+      switch (pilihan) {
+        case 1:
+          hasil = "Nasi Goreng";
+          break;
+        case 2:
+          hasil = "Mie Ayam";
+          break;
+        case 3:
+          hasil = "Sate Ayam";
+          break;
+        default:
+          hasil = "Menu tidak tersedia";
+      }
+
+      console.log("Pilihan kamu: " + hasil);
+    </script>
+  </body>
+</html>
