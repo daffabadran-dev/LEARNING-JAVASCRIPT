@@ -83,7 +83,7 @@
       console.log("Hasil:", c);
       // Output:
       // Sedang proses...  ← Dari console.log di dalam fungsi
-      // Hasil: Selesai    ← Dari return
+      // Hasil: Selesai    ← Dari return`
 
       /**
              * catatan:
@@ -105,7 +105,41 @@
       console.log(100 === "100");  // false (tipe data berbeda)
       console.log(0 === false);    // false
 
-             */
+
+
+      */
+
+      // tes lain
+      // 1. Punya return DAN console.log di dalam fungsi
+      function fungsi1() {
+        console.log("Di dalam fungsi1: A");
+        return "Nilai dari fungsi1";
+        console.log("Di dalam fungsi1: B"); // Ini TIDAK AKAN dieksekusi
+      }
+
+      // 2. Tidak punya return, tapi ada console.log di dalam
+      function fungsi2() {
+        console.log("Di dalam fungsi2");
+        // Tidak ada return
+      }
+
+      // 3. Tidak ada return, tidak ada console.log
+      function fungsi3() {
+        // Kosong
+      }
+
+      // TES
+      console.log("\n=== TES FUNGSI1 ===");
+      let hasil1 = fungsi1();
+      console.log("Hasil return fungsi1:", hasil1);
+
+      console.log("\n=== TES FUNGSI2 ===");
+      let hasil2 = fungsi2();
+      console.log("Hasil return fungsi2:", hasil2);
+
+      console.log("\n=== TES FUNGSI3 ===");
+      let hasil3 = fungsi3();
+      console.log("Hasil return fungsi3:", hasil3);
     </script>
   </body>
 </html>
