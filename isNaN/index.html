@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>isNaN</title>
+  </head>
+  <body>
+    <h1>Belajar isNaN</h1>
+    <script>
+      function validasiInput(input) {
+        if (isNaN(input)) {
+          console.log("input salah, input harus angka");
+          return false;
+        } else {
+          console.log("input valid", Number(input));
+          return true;
+        }
+      }
+
+      validasiInput("100"); //input valid
+      validasiInput("teks");
+      validasiInput("100teks");
+
+      console.log("-");
+      console.log("-");
+
+      // mencoba tanpa return
+      function validasiNoReturn(input) {
+        if (isNaN(input)) {
+          console.log("input harus angka");
+        } else {
+          console.log(`input valid, ${Number(input)}`);
+        }
+      }
+
+      let status = validasiNoReturn("100");
+      console.log(`status, ${status}`);
+      console.log("-");
+      console.log("-");
+      console.log("-");
+      //contoh lain
+      function cekInputAngka(input) {
+        if (isNaN(input)) {
+          return "bukan angka";
+        } else {
+          return "ini angka";
+        }
+      }
+      console.log(cekInputAngka("123"));
+      console.log(cekInputAngka("fff"));
+
+      // Fungsi 1: Hanya console.log
+      function contoh1() {
+        console.log("Halo dari fungsi");
+        // Tidak ada return
+      }
+
+      let a = contoh1();
+      console.log("Nilai a:", a);
+      // Output:
+      // Halo dari fungsi
+      // Nilai a: undefined ← Karena tidak ada return!
+
+      // Fungsi 2: Hanya return
+      function contoh2() {
+        return "Nilai balik";
+        // Tidak ada console.log
+      }
+
+      let b = contoh2();
+      console.log("Nilai b:", b);
+      // Output:
+      // Nilai b: Nilai balik ← Nilai return bisa dipakai!
+
+      // Fungsi 3: console.log + return
+      function contoh3() {
+        console.log("Sedang proses...");
+        return "Selesai";
+      }
+
+      let c = contoh3();
+      console.log("Hasil:", c);
+      // Output:
+      // Sedang proses...  ← Dari console.log di dalam fungsi
+      // Hasil: Selesai    ← Dari return
+
+      /**
+             * catatan:
+             * ada yang namanya type coercion, dimana JS mencoba mengkonversi tipe data secara otomatis
+             * contoh:
+             * "100" akan di konversi menjadi 100 (number), lalu
+             * dalam proses aritmatika -, +, *, /, JS akan mengkonversi string yang berisi angka menjadi number
+             * sedangkan untuk + (tambah) akan menjadi konkatenasi jika salah satu operand adalah string.
+             *
+             * ada juga yang dinamakan dengan loose equality (==) dimana JS akan mencoba mengkonversi tipe data secara otomatis
+             * // == (loose equality) - ADA konversi otomatis
+      console.log(100 == "100");   // true (string "100" jadi number 100)
+      console.log(0 == false);     // true (false jadi 0)
+      console.log(1 == true);      // true (true jadi 1)
+      console.log("" == 0);        // true (string kosong jadi 0)
+      console.log(null == undefined); // true (special case)
+
+      // === (strict equality) - TIDAK ada konversi
+      console.log(100 === "100");  // false (tipe data berbeda)
+      console.log(0 === false);    // false
+
+             */
+    </script>
+  </body>
+</html>
